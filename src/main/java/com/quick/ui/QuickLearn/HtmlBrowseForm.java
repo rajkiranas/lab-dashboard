@@ -34,7 +34,7 @@ public class HtmlBrowseForm extends com.vaadin.ui.LoginForm {
      *
      * @return
      */
-    @Override
+//    @Override
     protected String getLoginHTML() {
         // Application URI needed for submitting form
         String appUri = "abc" + "/";

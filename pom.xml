@@ -8,7 +8,7 @@
 
     <properties>
         <productionMode>false</productionMode>
-        <vaadin.version>7.0.3</vaadin.version>
+        <vaadin.version>7.7.0</vaadin.version>
         <vaadin.plugin.version>${vaadin.version}</vaadin.plugin.version>
         <netbeans.hint.deploy.server>Tomcat</netbeans.hint.deploy.server>
     </properties>
@@ -88,11 +88,11 @@
             <artifactId>vaadin-client-compiler</artifactId>
             <version>${vaadin.version}</version>
         </dependency>
-        <dependency>
+<!--        <dependency>
             <groupId>com.vaadin</groupId>
             <artifactId>vaadin-theme-compiler</artifactId>
-            <version>${vaadin.version}</version>
-        </dependency>        
+            <version>7.1.15</version>
+        </dependency>-->
         <dependency>
             <groupId>com.vaadin.addon</groupId>
             <artifactId>vaadin-calendar</artifactId>
@@ -144,17 +144,24 @@
             <version>4.2</version>
         </dependency>
         
-        <dependency>
-            <groupId>org.vaadin.addons</groupId>
-            <artifactId>imagestrip</artifactId>
-            <version>3.0</version>
-        </dependency>
+       
         
         <dependency>
             <groupId>org.vaadin.addon</groupId>
             <artifactId>confirmdialog</artifactId>
             <version>2.0.4</version>
         </dependency>
+        
+       <dependency>
+            <groupId>com.vaadin</groupId>
+            <artifactId>vaadin-maven-plugin</artifactId>
+            <version>${vaadin.version}</version>
+        </dependency>
+
+
+<!-- https://mvnrepository.com/artifact/org.eclipse.xtext/org.eclipse.xtext.xbase.lib.gwt -->
+
+
             
     </dependencies>
 
@@ -195,6 +202,7 @@
                     <style>OBF</style>
                     <compileReport>true</compileReport>
                     <runTarget>http://localhost:8080/</runTarget>
+                    
                 </configuration>
                 <executions>
                     <execution>

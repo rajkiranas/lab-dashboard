@@ -3,10 +3,9 @@
 <module>
 	<inherits name="com.vaadin.DefaultWidgetSet" />
 	<inherits name="com.vaadin.addon.calendar.gwt.CalendarWidgetset" />
-	<inherits name="com.vaadin.addon.charts.ChartsWithTimelineWidgetset" />
+	
 	<inherits name="org.vaadin.cssinject.Cssinject_addonWidgetset" />
-	<!-- <inherits name="org.vaadin.artur.widgetsetoptimizer.WidgetSetOptimizerWidgetSet" 
-		/> -->
+	<!--  -->
 
 	<set-configuration-property name="devModeRedirectEnabled"
 		value="true" />
@@ -26,4 +25,8 @@
 			class="com.vaadin.client.metadata.ConnectorBundleLoader" />
 	</generate-with>
 
+
+    <inherits name="com.vaadin.addon.timeline.gwt.TimelineWidgetSet" />
+
+    <inherits name="com.vaadin.addon.charts.Widgetset" />
 </module>

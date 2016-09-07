@@ -80,7 +80,7 @@ import java.lang.reflect.Type;
 import java.util.*;
 import org.codehaus.jettison.json.JSONException;
 import org.codehaus.jettison.json.JSONObject;
-import org.vaadin.peter.imagestrip.ImageStrip;
+
 
 @Theme("dashboard")
 @Title("The Learning Lab")
@@ -208,6 +208,23 @@ public class DashboardUI extends UI{
 
          schoolLogo.setWidth("90px");
          schoolLogo.setHeight("90px");
+         
+         
+//         final HorizontalCarousel carousel = new HorizontalCarousel();
+//
+//        // Only react to arrow keys when focused
+//        carousel.setArrowKeysMode(ArrowKeysMode.FOCUS);
+//        // Fetch children lazily
+//        carousel.setLoadMode(CarouselLoadMode.LAZY);
+//        // Transition animations between the children run 500 milliseconds
+//        carousel.setTransitionDuration(500);
+//
+//        // Add the child Components
+//        carousel.addComponent(new Button("First child"));
+//        carousel.addComponent(new Label("Second child"));
+//        carousel.addComponent(new TextField("Third child"));
+
+        // Add the Carousel to a parent layout
          labels.addComponent(schoolLogo);
          labels.setComponentAlignment(schoolLogo,Alignment.MIDDLE_CENTER);
             loginPanel.addComponent(labels);
@@ -356,45 +373,45 @@ public class DashboardUI extends UI{
          loginLayout.setExpandRatio(h, 3);
     }
      
-     private ImageStrip getImageStrip() {
-        
-
-        // Create new horizontally aligned strip of images
-        ImageStrip strip = new ImageStrip();
-
-        // Add ValueChangeListener to listen for image selection
-        //strip.addListener(this);
-
-        // Use animation
-        strip.setAnimated(true);
-
-        // Make strip to behave like select
-        strip.setSelectable(true);
-
-        // Set size of the box surrounding the images
-        strip.setImageBoxWidth(340);
-        strip.setImageBoxHeight(340);
-
-        // Set maximum size of the images
-        strip.setImageMaxWidth(225);
-        strip.setImageMaxHeight(225);
-
-        // Add image strip to main window
-        
-
-        // Limit how many images are visible at most simultaneously
-        strip.setMaxAllowed(3);
-
-        // Add few images to the strip using different methods
-        //strip.addImage("http://www.path.to.image/image.jpg");
-        strip.addImage(new FileResource(new File("/home/rajkirans/Desktop/folder2/inside-logo.jpg")));
-        strip.addImage(new FileResource(new File("/home/rajkirans/Desktop/folder2/m1.jpg")));
-        strip.addImage(new FileResource(new File("/home/rajkirans/Desktop/folder2/m2.jpg")));
-        strip.addImage(new FileResource(new File("/home/rajkirans/Desktop/folder2/mitlogo.png")));
-        strip.addImage(new FileResource(new File("/home/rajkirans/Desktop/folder2/Screenshot-1.png")));
-        return strip;
-        
-    }
+//     private ImageStrip getImageStrip() {
+//        
+//
+//        // Create new horizontally aligned strip of images
+//        ImageStrip strip = new ImageStrip();
+//
+//        // Add ValueChangeListener to listen for image selection
+//        //strip.addListener(this);
+//
+//        // Use animation
+//        strip.setAnimated(true);
+//
+//        // Make strip to behave like select
+//        strip.setSelectable(true);
+//
+//        // Set size of the box surrounding the images
+//        strip.setImageBoxWidth(340);
+//        strip.setImageBoxHeight(340);
+//
+//        // Set maximum size of the images
+//        strip.setImageMaxWidth(225);
+//        strip.setImageMaxHeight(225);
+//
+//        // Add image strip to main window
+//        
+//
+//        // Limit how many images are visible at most simultaneously
+//        strip.setMaxAllowed(3);
+//
+//        // Add few images to the strip using different methods
+//        //strip.addImage("http://www.path.to.image/image.jpg");
+//        strip.addImage(new FileResource(new File("/home/rajkirans/Desktop/folder2/inside-logo.jpg")));
+//        strip.addImage(new FileResource(new File("/home/rajkirans/Desktop/folder2/m1.jpg")));
+//        strip.addImage(new FileResource(new File("/home/rajkirans/Desktop/folder2/m2.jpg")));
+//        strip.addImage(new FileResource(new File("/home/rajkirans/Desktop/folder2/mitlogo.png")));
+//        strip.addImage(new FileResource(new File("/home/rajkirans/Desktop/folder2/Screenshot-1.png")));
+//        return strip;
+//        
+//    }
 
     
 

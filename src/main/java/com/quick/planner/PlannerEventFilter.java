@@ -65,7 +65,7 @@ public class PlannerEventFilter extends Window implements Property.ValueChangeLi
     private boolean isAllDay = true;
     private int custId;
     private int empid;
-    Calendar cal = Calendar.getInstance();
+    java.util.Calendar cal = java.util.Calendar.getInstance();
     private BasicEvent basicEvent;
     private AppointmentMst appointmentMst;
     private Label lblTimeSlot;
@@ -642,14 +642,14 @@ public class PlannerEventFilter extends Window implements Property.ValueChangeLi
         
         cal.setTime((Date) startTime.getValue());
 
-        cal.set(Calendar.HOUR_OF_DAY, Integer.valueOf(startTimeHr.getValue().toString()));
-        cal.set(Calendar.MINUTE, Integer.valueOf(startTimeMin.getValue().toString()));
-        cal.set(Calendar.SECOND, 0);
+        cal.set(java.util.Calendar.HOUR_OF_DAY, Integer.valueOf(startTimeHr.getValue().toString()));
+        cal.set(java.util.Calendar.MINUTE, Integer.valueOf(startTimeMin.getValue().toString()));
+        cal.set(java.util.Calendar.SECOND, 0);
         appointmentMst.setStarttime(cal.getTime());
 
-        cal.set(Calendar.HOUR_OF_DAY, Integer.valueOf(endTimeHr.getValue().toString()));
-        cal.set(Calendar.MINUTE, Integer.valueOf(endTimeMin.getValue().toString()));
-        cal.set(Calendar.SECOND, 0);
+        cal.set(java.util.Calendar.HOUR_OF_DAY, Integer.valueOf(endTimeHr.getValue().toString()));
+        cal.set(java.util.Calendar.MINUTE, Integer.valueOf(endTimeMin.getValue().toString()));
+        cal.set(java.util.Calendar.SECOND, 0);
         appointmentMst.setEndtime(cal.getTime());
 //       }
         appointmentMst.setEventStyle(colourCode);
@@ -795,8 +795,8 @@ public class PlannerEventFilter extends Window implements Property.ValueChangeLi
 
     private void createEmpEvent() throws Exception {
         Map map = new HashMap();
-        Calendar calanderStartDate = Calendar.getInstance();
-        Calendar calanderEndDate = Calendar.getInstance();
+        java.util.Calendar calanderStartDate = java.util.Calendar.getInstance();
+        java.util.Calendar calanderEndDate = java.util.Calendar.getInstance();
         if (validateForm()) {
 
 //        if(isWeekEvent)
@@ -813,12 +813,12 @@ public class PlannerEventFilter extends Window implements Property.ValueChangeLi
             calanderStartDate.setTime((Date) startTime.getValue());
             calanderEndDate.setTime((Date) startTime.getValue());
 
-            calanderStartDate.set(Calendar.HOUR_OF_DAY, Integer.valueOf(startTimeHr.getValue().toString()));
-            calanderStartDate.set(Calendar.MINUTE, Integer.valueOf(startTimeMin.getValue().toString()));
-            calanderStartDate.set(Calendar.SECOND, 0);
-            calanderEndDate.set(Calendar.HOUR_OF_DAY, Integer.valueOf(endTimeHr.getValue().toString()));
-            calanderEndDate.set(Calendar.MINUTE, Integer.valueOf(endTimeMin.getValue().toString()));
-            calanderEndDate.set(Calendar.SECOND, 0);
+            calanderStartDate.set(java.util.Calendar.HOUR_OF_DAY, Integer.valueOf(startTimeHr.getValue().toString()));
+            calanderStartDate.set(java.util.Calendar.MINUTE, Integer.valueOf(startTimeMin.getValue().toString()));
+            calanderStartDate.set(java.util.Calendar.SECOND, 0);
+            calanderEndDate.set(java.util.Calendar.HOUR_OF_DAY, Integer.valueOf(endTimeHr.getValue().toString()));
+            calanderEndDate.set(java.util.Calendar.MINUTE, Integer.valueOf(endTimeMin.getValue().toString()));
+            calanderEndDate.set(java.util.Calendar.SECOND, 0);
 
 //        }
 
