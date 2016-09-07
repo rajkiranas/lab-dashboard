@@ -10,6 +10,7 @@
 
 package com.vaadin.demo.dashboard;
 
+import com.github.woothemes.flexslider2.FlexSlider2;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.quick.bean.Userprofile;
@@ -225,6 +226,7 @@ public class DashboardUI extends UI{
 //        carousel.addComponent(new TextField("Third child"));
 
         // Add the Carousel to a parent layout
+        
          labels.addComponent(schoolLogo);
          labels.setComponentAlignment(schoolLogo,Alignment.MIDDLE_CENTER);
             loginPanel.addComponent(labels);
@@ -341,21 +343,26 @@ public class DashboardUI extends UI{
          HorizontalLayout h = new HorizontalLayout();
          h.setSizeFull();
 
-         Image schoolPhoto = new Image(null, new ThemeResource("img/m1.jpg"));
+        // Image schoolPhoto = new Image(null, new ThemeResource("img/m1.jpg"));
          
          //Embedded schoolPhoto =  new Embedded(null,new ThemeResource("img/m1.jpg"));
 //         schoolPhoto.setWidth("800px");
 //         schoolPhoto.setHeight("400px");
-         schoolPhoto.setWidth("100%");
-         schoolPhoto.setHeight("100%");
+         //schoolPhoto.setWidth("100%");
+         //schoolPhoto.setHeight("100%");
          
 //         VerticalLayout imgLayout = new VerticalLayout();
 //         imgLayout.setSizeFull();
 //         imgLayout.addComponent(schoolPhoto);
 
-         h.addComponent(schoolPhoto);
-         h.setComponentAlignment(schoolPhoto, Alignment.MIDDLE_CENTER);
-         h.setExpandRatio(schoolPhoto, 3);
+        FlexSlider2 flexSlider2 = new FlexSlider2();
+        //flexSlider2.setWidth("650px");
+        flexSlider2.setWidth("85%");
+        flexSlider2.setHeightUndefined();
+
+         h.addComponent(flexSlider2);
+         h.setComponentAlignment(flexSlider2, Alignment.MIDDLE_CENTER);
+         h.setExpandRatio(flexSlider2, 3);
          
 //         ImageStrip strip = getImageStrip();
 //         h.addComponent(strip);
